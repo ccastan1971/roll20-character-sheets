@@ -1,5 +1,30 @@
 Change Log
 ==============================================
+**2022-11-22 ** v.15 Paul V
+	Fixed all the Passive Checks to be 10+modifiers+stat modifier and not +stat
+	Fixed issue where the Skill speciality couldn't be edited on the main screen, it can now be edited on both main screen and popup
+**2022-11-15 ** v.15 Paul V
+	Added new Dice rolling logic, that gathers the components of the dice roll when the button is press this means that the every roll on the sheet doesn't need to be updated everytime standard/Advantage/Disdadvantage is pressed
+	Fixed Wisdom (perception) initiative to use Wisdom
+	Fixed all the Passive Checks to be 10+modifiers	
+**2022-09-28 ** v.14 Paul V
+	Added D10 and D12 in to the Expertise dice list for high level Rogues - but this is a static Expertise dice uneffected by Specialty (as that caps at d8)
+	Changed the Expertise to be a dropdown list no data entry allowed
+	Added logic to exclude the expertise dice from the crit colour logic of roll20
+**2022-08-14 ** v.13 Paul V
+	Added new Dex(Basic) initiative option
+	Added Bloodied HP on to the NPC sheet 
+	Added all the missing words into the translate
+	Added Standard / Advantage / Disadvantage logic for initiative, saves, stat rolls
+**2022-05-04 ** v.12 Paul V
+	Major changes to the Skills rolls added a skill settings window for each skill. moved Expertise dice on to that window
+	Added a whole swave of modifiers to the rolls 
+	Moved Jack of all trades into the Global skill settings window
+	Moves all Expertise Dice and Proficient into the skill specific setting windows
+	Added Standard / Advantage / Disadvantage buttons on to the sheet allowing to rolls with advantage or disadvantage
+**2022-03-07 ** v.11 Paul V
+	Split the Archtypes so only the selected class's archtypes will appear in the list 
+	Fixed bug in NPC Sheet
 **2022-02-31 ** v.10 Paul V
 	---Split the Archtypes so only the selected class's archtypes will appear in the list -- can't get this working at the moment
 	Improved the readability of TextBoxes, increase the text size and darkened the colour a little
