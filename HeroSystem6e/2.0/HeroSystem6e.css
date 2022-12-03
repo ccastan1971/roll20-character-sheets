@@ -1,0 +1,42 @@
+.charsheet {
+  background-image: url(https://i.imgur.com/PWYEOnM.jpg);
+  background-color: darkblue;
+  background-repeat: repeat;
+}
+
+.charsheet .sheet-grid-section {
+  display: grid;
+  grid-template-columns: repeat(6, 135px);
+  grid-template-rows: 140px 25px 250px 200px 200px;
+  grid-template-areas:
+    "avatar general general general  general       logo"
+    "nav     nav     nav     nav     nav           nav"
+    "chars   chars   chars   chars   chars         chars"
+    "skills  skills  talent  talent  movement      movement"
+    "powers  powers  powers  powers  complications complications";
+  gap: 4px;
+}
+
+.charsheet div.sheet-block {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.charsheet div.sheet-avatar img,
+div.sheet-logo img {
+  width: 90px;
+  height: 100px;
+}
+
+.charsheet div.sheet-avatar {
+  grid-area: avatar;
+}
+
+.charsheet div.sheet-general {
+  grid-area: general;
+}
+
+.charsheet div.sheet-logo {
+  grid-area: logo;
+}
