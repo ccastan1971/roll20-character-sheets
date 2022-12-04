@@ -29,6 +29,11 @@ div.sheet-logo img {
   height: 100px;
 }
 
+.charsheet div.sheet-image-avatar {
+  max-width: 90px;
+  max-height: 100px;
+}
+
 .charsheet div.sheet-avatar {
   grid-area: avatar;
 }
