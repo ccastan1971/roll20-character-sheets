@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots");
+
 .charsheet {
-  background-image: url(https://i.imgur.com/PWYEOnM.jpg);
+  background-image: url("https://i.imgur.com/PWYEOnM.jpg");
   background-repeat: repeat;
-  max-width: 831px;
+  min-width: 835px;
+  max-width: 850px;
 }
 
 .charsheet .sheet-grid-section {
@@ -27,6 +30,22 @@
 div.sheet-logo img {
   width: 120px;
   height: 140px;
+}
+
+.charsheet div.sheet-general-background {
+  background-color: whitesmoke;
+  opacity: 30%;
+}
+
+.charsheet .sheet-hero-name {
+  font-family: "Zen Dots", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: orangered;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0), 2px 2px 1px red;
+  text-align: center;
+  background: none;
+  border: 0px;
+  min-width: 540px;
 }
 
 .charsheet div.sheet-avatar {
