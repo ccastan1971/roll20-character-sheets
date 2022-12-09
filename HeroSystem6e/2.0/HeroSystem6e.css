@@ -36,7 +36,8 @@
   align-items: center;
 }
 
-.sheet-avatar-container {
+.sheet-avatar-container,
+.sheet-logo-container {
   position: relative;
 }
 
@@ -44,12 +45,18 @@
 .sheet-avatar-token {
   position: absolute;
   left: 10px;
-  top: 10px;
+  top: 5px;
+}
+
+.sheet-character-logo {
+  position: absolute;
+  top: 5px;
 }
 
 .sheet-avatar-bg img,
 .sheet-avatar-token img,
 .sheet-character-logo {
+  display: block;
   height: 150px;
   width: 150px;
 }
@@ -80,7 +87,7 @@
   row-gap: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 
 .charsheet label {
@@ -101,7 +108,7 @@
 }
 
 .sheet-gen-labels-3 {
-  flex: 1 0 80px;
+  flex: 1 0 85px;
   padding: 0;
 }
 
@@ -139,7 +146,7 @@
   text-align: left;
   padding: 0 4px 0 4px;
   text-overflow: clip;
-  width: 98px;
+  width: 80px;
 }
 
 .charsheet .sheet-avatar {
