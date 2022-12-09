@@ -1,65 +1,48 @@
 <!-- Header & Character Icons -->
 
-<section>
-  <!-- Tokens -->
-  <div class="sheet-grid-section">
-    <div class="sheet-avatar sheet-block">
-      <img
-        src="https://i.imgur.com/eMaiqcH.png"
-        alt="avatar"
-        class="sheet-avatar-bg"
-      />
+<!-- Using Grid and Flex-->
+<div class="sheet-container">
+  <!-- Avatar -->
+  <div class="sheet-avatar-container sheet-block">
+    <div class="sheet-avatar-bg">
+      <img src="https://i.imgur.com/eMaiqcH.png" alt="avatar" />
     </div>
-    <div class="sheet-avatar sheet-block">
-      <img
-        name="attr_character_avatar"
-        alt="avatar_img"
-        class="sheet-character-avatar"
-      />
+    <div class="sheet-avatar-token">
+      <img name="attr_character_avatar" alt="avatar_img" />
     </div>
-    <div class="sheet-logo sheet-block">
-      <img
-        src="https://i.imgur.com/ui3Yl2e.png"
-        alt="logo"
-        class="sheet-character-logo"
-      />
-    </div>
-    <!-- Character Name -->
-    <header>
-      <div class="sheet-name sheet-block">
-        <input
-          type="text"
-          name="attr_character_name"
-          class="sheet-hero-name"
-          readonly="true"
-        />
-      </div>
-    </header>
-    <!-- Character General Information -->
-    <header>
-      <div class="sheet-general sheet-general-box sheet-block">
-        <label class="sheet-alt-name"
-          >Real Name:
-          <input type="text" name="attr_real_name" class="sheet-alt-name-input"
-        /></label>
-        <label class="sheet-age"
-          >Age: <input type="text" name="attr_age" class="sheet-age-input"
-        /></label>
-        <label class="sheet-age"
-          >Height:
-          <input type="text" name="attr_height" class="sheet-age-input"
-        /></label>
-        <label class="sheet-age"
-          >Weight:
-          <input type="text" name="attr_weight" class="sheet-age-input"
-        /></label>
-        <label class="sheet-age"
-          >Hair: <input type="text" name="attr_hair" class="sheet-hair-input"
-        /></label>
-        <label class="sheet-age"
-          >Eyes: <input type="text" name="attr_eyes" class="sheet-eyes-input"
-        /></label>
-      </div>
-    </header>
   </div>
-</section>
+
+  <div class="sheet-name sheet-hero-name sheet-block">
+    <input type="text" name="attr_character_name" readonly="true" />
+  </div>
+
+  <div class="sheet-general sheet-general-box">
+    <label class="sheet-gen-labels-1"
+      >Real Name:
+      <input type="text" name="attr_real_name" class="sheet-real-name"
+    /></label>
+    <label class="sheet-gen-labels-2"
+      >Age: <input type="text" name="attr_age" class="sheet-age"
+    /></label>
+    <label class="sheet-gen-labels-3"
+      >Height: <input type="text" name="attr_height" class="sheet-height"
+    /></label>
+    <label class="sheet-gen-labels-3"
+      >Weight: <input type="text" name="attr_weight" class="sheet-weight"
+    /></label>
+    <label class="sheet-gen-labels-3"
+      >Hair: <input type="text" name="attr_hair" class="sheet-hair"
+    /></label>
+    <label class="sheet-gen-labels-3"
+      >Eyes: <input type="text" name="attr_eyes" class="sheet-eyes"
+    /></label>
+  </div>
+
+  <div class="sheet-logo sheet-logo-container sheet-block">
+    <img
+      src="https://i.imgur.com/ui3Yl2e.png"
+      alt="logo"
+      class="sheet-character-logo"
+    />
+  </div>
+</div>
