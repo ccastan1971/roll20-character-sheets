@@ -1,71 +1,30 @@
 <!-- AVATAR AND LOGO -->
-<section>
-  <div class="sheet-main-header">
-    <div class="sheet-avatar sheet-avatar-bg">
-      <img
-        src="https://i.imgur.com/eMaiqcH.png"
-        alt="avatar"
-        class="sheet-avatar-bg-img"
-      />
-      <div class="sheet-avatar sheet-avatar-token">
-        <img name="attr_avatar" alt="avatar_img" class="avatar" />
-      </div>
-    </div>
-    <div class="sheet-logo sheet-logo-bg">
-      <img
-        src="https://i.imgur.com/eMaiqcH.png"
-        alt="avatar"
-        class="sheet-logo-img"
-      />
-    </div>
-    <!-- CHARACTER GENERAL INFO -->
-    <div class="sheet-general">
-      <div class="sheet-hero-name">
-        <input type="text" name="attr_character_name" readonly="true" />
-      </div>
-      <div class="sheet-general-info">
-        <label class="sheet-gen-format-1"
-          >Real Name: <input class="sheet-real-name" name="attr_real_name"
-        /></label>
-        <label class="sheet-gen-format-2"
-          >Age: <input class="sheet-age" name="attr_age"
-        /></label>
-        <label class="sheet-gen-format-3"
-          >Height: <input class="sheet-height" name="attr_height"
-        /></label>
-        <label class="sheet-gen-format-3"
-          >Weight: <input class="sheet-weight" name="attr_weight"
-        /></label>
-        <label class="sheet-gen-format-3"
-          >Eyes: <input class="sheet-eyes" name="attr_eyes"
-        /></label>
-      </div>
-    </div>
+<section class="section-information">
+  <div class="section-avatar-box">
+    <img
+    class="section-information-img-background"
+    src="https://i.imgur.com/eMaiqcH.png"
+    />
+    <img class="section-information-img-avatar" name="attr_avatar"/>
   </div>
-</section>
-<section>
-  <div class="sheet-nav-container">
-    <div class="sheet-nav"><span>NAVIGATION</span></div>
+  <div class="grid-section-information">
+    <div class="hero-name">Defender</div>
+    <div class="hero-alt-information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, obcaecati ratione provident animi soluta quo sapiente minima laboriosam quae debitis maxime similique omnis neque vel quos atque vitae recusandae? Nostrum!</div>
+  </div>  
   </div>
-</section>
-<!-- CHARACTERISTICS -->
-<section>
-  <div class="sheet-characteristics-container">
-    <div class="sheet-characteristics-title"><span>CHARACTERISTICS</span></div>
-  </div>
-</section>
 
-<!-- SHEETWORKER -->
-<script type="text/worker">
-  <!-- SET AVATARS -->
-  on("sheet:opened", () => {
-    getAttrs(["character_avatar"], (values) => {
-      if(!values["character_avatar"]){
-        setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
-      } else {
-        const avatar = values["character_avatar"];
-        setAttrs({avatar:avatar});
-      };
+  <!-- SHEETWORKER -->
+  <script type="text/worker">
+    <!-- SET AVATARS -->
+    on("sheet:opened", () => {
+      getAttrs(["character_avatar"], (values) => {
+        if(!values["character_avatar"]){
+          setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
+        } else {
+          const avatar = values["character_avatar"];
+          setAttrs({avatar:avatar});
+        };
+      });
     });
-  });
-</script>
+  </script>
+</section>
