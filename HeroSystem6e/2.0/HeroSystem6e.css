@@ -115,12 +115,14 @@ Default: 11px
 .section-information {
   display: flex;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 .section-avatar-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 30%;
 
   position: relative;
 }
@@ -128,12 +130,15 @@ Default: 11px
 .section-information-img-background {
   min-width: 13%;
   margin-right: 1rem;
+  padding: 0.5rem;
+  transform: translateY(15px);
 }
 
 .section-information-img-avatar {
   min-width: 20%;
   position: absolute;
   right: 1rem;
+  transform: translateY(13px);
 }
 
 .grid-section-information {
@@ -171,19 +176,19 @@ Default: 11px
   background-color: rgba(230, 230, 235, 0.6);
 }
 
-.hero-alt-info {
+/* .hero-alt-info {
   grid-column: span 2;
-}
+} */
 
 .hero-alt-info label,
-.hero-alt-info label input {
+.hero-alt-info label > input {
   display: inline;
 }
 
 .hero-alt-info label {
   font-size: 1.4rem;
   color: #fff;
-  /* width: fit-content; */
+  font-weight: 400;
 }
 
 .hero-alt-info label > input {
@@ -192,6 +197,8 @@ Default: 11px
   border-radius: 0;
   border-bottom: 1px solid #333;
   padding-left: 0.3rem;
+  margin-bottom: 0.5rem;
+
   overflow: hidden;
   text-overflow: clip;
   font-size: 1.4rem;
