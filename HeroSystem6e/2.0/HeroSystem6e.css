@@ -19,10 +19,13 @@ Extra Bold: 800
 
   
   --- 02 COLORS
-  - Primary: rgba(0, 0, 51, 1);
-  #F15A29
+  - background: rgba(0, 0, 51, 1)
+Primary font: #333
+ Border: #777
+ #ff773d
  #808099
- #333;
+ #dedede
+
 
   *** Tint Dark to Light
   - Tints:
@@ -34,7 +37,9 @@ Extra Bold: 800
   - Greys: 
   
   --- 05 SHADOWS
-#180904
+#ffbb9e;
+#000033
+}
   
   --- 06 BORDER-RADIUS
 Default: 11px
@@ -53,7 +58,7 @@ Default: 11px
   font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: #333;
 
   max-width: 80rem;
   max-height: 100rem;
@@ -62,17 +67,62 @@ Default: 11px
   border-radius: 11px;
 }
 
+/* HEADER NAV */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1rem #000033;
+}
+
+.menu-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  margin: 1rem 0 0.5rem 0;
+}
+
+.menu-nav button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+  color: #dedede;
+  font-weight: 500;
+}
+
+.menu-nav button:hover {
+  color: #ff773d;
+  text-decoration: underline;
+  text-decoration-color: #ff773d;
+}
+
+.menu-nav button:active {
+  text-decoration: none;
+  text-shadow: 0.1rem 0.1rem 0 #ffbb9e;
+}
+
+.logo {
+  width: 15%;
+  opacity: 60%;
+  margin-bottom: 0.5rem;
+}
+
+/* General Character Information */
+
+.section-information {
+  display: flex;
+  height: auto;
+}
+
 .section-avatar-box {
   display: flex;
   align-items: center;
   justify-content: center;
 
   position: relative;
-}
-
-.section-information {
-  display: flex;
-  height: auto;
 }
 
 .section-information-img-background {
@@ -92,13 +142,13 @@ Default: 11px
   grid-template-rows: auto 1fr;
 }
 
-.grid-section-information input {
+.grid-section-information > input {
   border: none;
   background: none;
   padding: 0;
   margin-bottom: 0.5rem;
 
-  text-shadow: 0 0.1rem 0.2rem #180904;
+  text-shadow: 0 0.1rem 0.1rem #ffbb9e;
 }
 
 .grid-section-information input:focus {
@@ -108,7 +158,7 @@ Default: 11px
 .hero-name {
   font-family: 'Orbitron', Arial, Helvetica, sans-serif;
   font-size: 3rem;
-  color: #f15a29;
+  color: #ff773d;
   font-weight: 900;
   text-align: center;
   width: 100%;
@@ -126,22 +176,27 @@ Default: 11px
 }
 
 .hero-alt-info label,
-.hero-alt-info input {
+.hero-alt-info label input {
   display: inline;
-  width: fit-content;
 }
 
 .hero-alt-info label {
   font-size: 1.4rem;
   color: #fff;
+  /* width: fit-content; */
 }
 
 .hero-alt-info label > input {
+  background: none;
+  border: 0;
   border-radius: 0;
   border-bottom: 1px solid #333;
   padding-left: 0.3rem;
   overflow: hidden;
   text-overflow: clip;
-
+  font-size: 1.4rem;
+  font-weight: 600;
   color: #333;
+  /* width: fit-content; */
+  width: max-content;
 }

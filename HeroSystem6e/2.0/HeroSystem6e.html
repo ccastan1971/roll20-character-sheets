@@ -1,11 +1,37 @@
+<!-- Game Logo and Navigation Links -->
+<header>
+  <div class="header">
+    <nav class="menu-nav">
+      <button type="action" name="act_home">Home</button>
+      <button type="action" name="act_movement">Movement</button>
+      <button type="action" name="act_skills">Skills</button>
+      <button type="action" name="act_talents">Talents/Perks</button>
+      <button type="action" name="act_powers">Powers</button>
+      <button type="action" name="act_complicaitons">Complications</button>
+      <button type="action" name="act_tactical">Tactical</button>
+      <button type="action" name="act_background">Background</button>
+    </nav>
+    <img
+      class="logo"
+      src="https://i.imgur.com/ivPTff2.png"
+      alt="Hero Games Logo"
+    />
+  </div>
+</header>
+
 <!-- CHARACTER INFORMATION AND AVATAR -->
-<section class="section-information">
+<section class="section-information" #id="#">
   <div class="section-avatar-box">
     <img
       class="section-information-img-background"
       src="https://i.imgur.com/eMaiqcH.png"
+      alt="hexagonal avatar background"
     />
-    <img class="section-information-img-avatar" name="attr_avatar" />
+    <img
+      class="section-information-img-avatar"
+      name="attr_avatar"
+      alt="character's avatar"
+    />
   </div>
   <div class="grid-section-information">
     <input
@@ -18,22 +44,45 @@
       <div class="hero-alt-info">
         <label
           >Real Name:
-          <input type="text" name="attr_real_name" class="sheet-real-name"
+          <input
+            type="text"
+            name="attr_real_name"
+            class="sheet-real-name"
+            maxlength="30"
+            size="30"
         /></label>
         <label
-          >Age: <input type="text" name="attr_age" class="sheet-age"
+          >Age:
+          <input
+            type="text"
+            name="attr_age"
+            class="sheet-age"
+            maxlength="5"
+            size="5"
         /></label>
         <label
-          >Height: <input type="text" name="attr_height" class="sheet-height"
+          >Height:
+          <input
+            type="text"
+            name="attr_height"
+            class="sheet-height"
+            maxlength="10"
         /></label>
         <label
-          >Weight: <input type="text" name="attr_weight" class="sheet-weight"
+          >Weight:
+          <input
+            type="text"
+            name="attr_weight"
+            class="sheet-weight"
+            maxlength="10"
         /></label>
         <label
-          >Hair: <input type="text" name="attr_hair" class="sheet-hair"
+          >Hair:
+          <input type="text" name="attr_hair" class="sheet-hair" maxlength="20"
         /></label>
         <label
-          >Eyes: <input type="text" name="attr_eyes" class="sheet-eyes"
+          >Eyes:
+          <input type="text" name="attr_eyes" class="sheet-eyes" maxlength="20"
         /></label>
       </div>
     </div>
