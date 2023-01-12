@@ -1,30 +1,91 @@
-<!-- AVATAR AND LOGO -->
+<!-- CHARACTER INFORMATION AND AVATAR -->
 <section class="section-information">
   <div class="section-avatar-box">
     <img
-    class="section-information-img-background"
-    src="https://i.imgur.com/eMaiqcH.png"
+      class="section-information-img-background"
+      src="https://i.imgur.com/eMaiqcH.png"
     />
-    <img class="section-information-img-avatar" name="attr_avatar"/>
+    <img class="section-information-img-avatar" name="attr_avatar" />
   </div>
   <div class="grid-section-information">
-    <div class="hero-name">Defender</div>
-    <div class="hero-alt-information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, obcaecati ratione provident animi soluta quo sapiente minima laboriosam quae debitis maxime similique omnis neque vel quos atque vitae recusandae? Nostrum!</div>
-  </div>  
+    <input
+      class="hero-name"
+      type="text"
+      name="attr_character_name"
+      readonly="true"
+    />
+    <div class="hero-alt-info-box">
+      <div class="hero-alt-info">
+        <label
+          >Real Name:
+          <input type="text" name="attr_real_name" class="sheet-real-name"
+        /></label>
+        <label
+          >Age: <input type="text" name="attr_age" class="sheet-age"
+        /></label>
+        <label
+          >Height: <input type="text" name="attr_height" class="sheet-height"
+        /></label>
+        <label
+          >Weight: <input type="text" name="attr_weight" class="sheet-weight"
+        /></label>
+        <label
+          >Hair: <input type="text" name="attr_hair" class="sheet-hair"
+        /></label>
+        <label
+          >Eyes: <input type="text" name="attr_eyes" class="sheet-eyes"
+        /></label>
+      </div>
+    </div>
   </div>
-
-  <!-- SHEETWORKER -->
-  <script type="text/worker">
-    <!-- SET AVATARS -->
-    on("sheet:opened", () => {
-      getAttrs(["character_avatar"], (values) => {
-        if(!values["character_avatar"]){
-          setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
-        } else {
-          const avatar = values["character_avatar"];
-          setAttrs({avatar:avatar});
-        };
-      });
-    });
-  </script>
 </section>
+
+<!-- CHARACTERISTICS -->
+<section>
+  <div class="grid grid--3-cols">
+    <div class="characteristics-general-label">Characteristics</div>
+    <div class="characteristics-general">
+      <div class="characteristic">STR</div>
+      <div class="characteristic">DEC</div>
+      <div class="characteristic">CON</div>
+      <div class="characteristic">INT</div>
+      <div class="characteristic">EGO</div>
+      <div class="characteristic">PRE</div>
+      <div class="characteristic">SPD</div>
+    </div>
+    <div class="characteristics-tactical-labels">
+      <div>Combat Values</div>
+      <div>Health & Recovery</div>
+      <div>Defenses</div>
+    </div>
+    <div class="characteristics-tactical">
+      <div>OCV</div>
+      <div>OMCV</div>
+      <div>REC</div>
+      <div>END</div>
+      <div>PD</div>
+      <div>rPD</div>
+      <div>DCV</div>
+      <div>DMCV</div>
+      <div>STUN</div>
+      <div>BODY</div>
+      <div>ED</div>
+      <div>rED</div>
+    </div>
+  </div>
+</section>
+
+<!-- SHEETWORKER -->
+<script type="text/worker">
+  <!-- SET AVATARS -->
+  on("sheet:opened", () => {
+    getAttrs(["character_avatar"], (values) => {
+      if(!values["character_avatar"]){
+        setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
+      } else {
+        const avatar = values["character_avatar"];
+        setAttrs({avatar:avatar});
+      };
+    });
+  });
+</script>
