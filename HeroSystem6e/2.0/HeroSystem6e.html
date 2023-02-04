@@ -11,7 +11,7 @@
       <button type="action" name="act_background">Background</button>
     </nav>
     <img
-      class="logo"
+      class="logo-img"
       src="https://i.imgur.com/ivPTff2.png"
       alt="Hero Games Logo"
     />
@@ -32,15 +32,16 @@
       alt="character's avatar"
     />
   </div>
-  <div class="grid-section-information">
+  <div class="grid-section-information compendium-drop-target">
     <input
       class="hero-name"
       type="text"
       name="attr_character_name"
+      accept="Hero Name"
       readonly="true"
     />
     <div class="hero-alt-info-box">
-      <div class="hero-alt-info">
+      <div class="hero-alt-info compendium-drop-target">
         <label
           >Real Name:
           <input
@@ -49,6 +50,7 @@
             class="sheet-real-name"
             maxlength="30"
             size="30"
+            accept="Real Name"
         /></label>
         <label
           >Age:
@@ -58,6 +60,7 @@
             class="sheet-age"
             maxlength="5"
             size="5"
+            accept="Age"
         /></label>
         <label
           >Height:
@@ -67,6 +70,7 @@
             class="sheet-height"
             maxlength="15"
             size="16"
+            accept="Height"
         /></label>
         <label
           >Weight:
@@ -76,10 +80,16 @@
             class="sheet-weight"
             maxlength="15"
             size="15"
+            accept="Weight"
         /></label>
         <label
           >Hair:
-          <input type="text" name="attr_hair" class="sheet-hair" maxlength="20"
+          <input
+            type="text"
+            name="attr_hair"
+            class="sheet-hair"
+            maxlength="20"
+            accept="Hair"
         /></label>
         <label
           >Eyes:
@@ -89,6 +99,7 @@
             class="sheet-eyes"
             maxlength="20"
             size="20"
+            accept="Eyes"
         /></label>
       </div>
     </div>
@@ -96,36 +107,538 @@
 </section>
 
 <!-- CHARACTERISTICS -->
-<section>
+<section class="characteristic-section">
   <div class="grid grid--3-cols">
-    <div class="characteristics-general-label">Characteristics</div>
-    <div class="characteristics-general">
-      <div class="characteristic">STR</div>
-      <div class="characteristic">DEC</div>
-      <div class="characteristic">CON</div>
-      <div class="characteristic">INT</div>
-      <div class="characteristic">EGO</div>
-      <div class="characteristic">PRE</div>
-      <div class="characteristic">SPD</div>
+    <div
+      class="characteristic-header characteristics-header--characteristics characteristics-header--label main-label"
+    >
+      Characteristics
+      <img
+        class="characteristic-header--img"
+        src="https://i.imgur.com/isPBwFJ.png"
+      />
     </div>
-    <div class="characteristics-tactical-labels">
-      <div>Combat Values</div>
-      <div>Health & Recovery</div>
-      <div>Defenses</div>
+    <div class="characteristics-background--characteristics">
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">STR</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_str"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">DEX</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_dex"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">CON</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_con"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">INT</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_int"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">EGO</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_ego"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">PRE</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_pre"
+          value="10"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic background"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">SPD</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_spd"
+          value="2"
+        />
+      </div>
     </div>
-    <div class="characteristics-tactical">
-      <div>OCV</div>
-      <div>OMCV</div>
-      <div>REC</div>
-      <div>END</div>
-      <div>PD</div>
-      <div>rPD</div>
-      <div>DCV</div>
-      <div>DMCV</div>
-      <div>STUN</div>
-      <div>BODY</div>
-      <div>ED</div>
-      <div>rED</div>
+    <!-- TACTICAL CHARACTERISTICS -->
+    <div class="characteristic-header--left characteristics-header--label">
+      Combat Values
+    </div>
+    <div class="characteristic-header characteristics-header--label">
+      Health & Recovery
+    </div>
+    <div class="characteristic-header--right characteristics-header--label">
+      Defenses
+    </div>
+    <div class="characteristic-background--combat-value-1">
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--CV-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">OCV</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_ocv"
+          value="3"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--CV-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">OMCV</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_omcv"
+          value="3"
+        />
+      </div>
+    </div>
+    <div class="characteristic-background--health-recovery-1">
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--HR-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">REC</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_rec"
+          value="4"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--HR-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">END</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_end"
+          value="20"
+        />
+      </div>
+    </div>
+    <div class="characteristic-background--defenses-1">
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--DF-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">PD</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_pd"
+          value="2"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--DF-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">rPD</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_rpd"
+          value="0"
+        />
+      </div>
+    </div>
+    <div
+      class="characteristic-background--combat-value-1 characteristic-background--combat-value-2"
+    >
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--CV-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">DCV</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_ed"
+          value="3"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--CV-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">DMCV</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_dmcv"
+          value="3"
+        />
+      </div>
+    </div>
+    <div class="characteristic-background--health-recovery-2">
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--HR-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">STUN</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_stun"
+          value="20"
+        />
+      </div>
+      <div class="characteristic-container characteristic--body-left-move">
+        <img
+          class="characteristic-background--HR-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+          arrow"
+        />
+        <span class="characteristic-background--label">BODY</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+          arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_body"
+          value="10"
+        />
+      </div>
+    </div>
+    <div
+      class="characteristic-background--defenses-1 characteristic-background--defenses-2"
+    >
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--DF-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">ED</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_ed"
+          value="4"
+        />
+      </div>
+      <div class="characteristic-container">
+        <img
+          class="characteristic-background--DF-img"
+          src="https://i.imgur.com/q3XMqHu.png"
+          alt="characterisctic hex bachground"
+        />
+        <img
+          class="charactereristic-background--up-arrow"
+          src="https://i.imgur.com/yVXfOf7.png"
+          alt="characteristic background up
+        arrow"
+        />
+        <span class="characteristic-background--label">rED</span>
+        <img
+          class="charactereristic-background--down-arrow"
+          src="https://i.imgur.com/DMkJScp.png"
+          alt="characteristic background down
+        arrow"
+        />
+        <input
+          class="characteristic-input"
+          type="number"
+          name="attr_red"
+          value="0"
+        />
+      </div>
     </div>
   </div>
 </section>
@@ -141,6 +654,16 @@
         const avatar = values["character_avatar"];
         setAttrs({avatar:avatar});
       };
+    });
+  });
+
+  <!-- Set Characteristic Maximums and Defaults -->
+  <!-- STRENGTH-->
+  on("change:str sheet:opened", function() {
+    getAttrs(["str"], function(values){
+      let s = +values.str || 10;
+      setAttrs({str_max:s
+      });
     });
   });
 </script>

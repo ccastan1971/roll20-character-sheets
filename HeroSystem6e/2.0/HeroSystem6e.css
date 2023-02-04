@@ -21,10 +21,7 @@ Extra Bold: 800
   --- 02 COLORS
   - background: rgba(0, 0, 51, 1)
 Primary font: #333
- Border: #777
- #ff773d
- #808099
- #dedede
+ Border: #ff773d,  #808099,  #dedede
 
 
   *** Tint Dark to Light
@@ -32,9 +29,9 @@ Primary font: #333
 
 
   *** Shade color to dark
-  - Shades: rgba(230, 230, 235, 0.6)
+  - Shades: 
   - Accents:
-  - Greys: 
+  - Greys: rgba(230, 230, 235, 0.6), rgba(187, 187, 187, 0.8);
   
   --- 05 SHADOWS
 #ffbb9e;
@@ -48,6 +45,20 @@ Default: 11px
   - SPACING SYSTEM (px)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+
+/* GENERAL CSS CLASSES */
+
+.grid {
+  display: grid;
+  width: 100%;
+  column-gap: 1.2rem;
+  row-gap: 1.6rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
 
 .charsheet {
   /* background-image: url('https://i.imgur.com/916yRM5.png'); */
@@ -70,7 +81,7 @@ Default: 11px
 /* HEADER NAV */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1rem;
   box-shadow: 0 0.5rem 1rem #000033;
 }
@@ -88,7 +99,7 @@ Default: 11px
   background: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #dedede;
   font-weight: 500;
 }
@@ -103,10 +114,15 @@ Default: 11px
   text-decoration: none;
   text-shadow: 0.1rem 0.1rem 0 #ffbb9e;
 }
-
+/* 
 .logo {
-  width: 15%;
-  opacity: 60%;
+  display: flex;
+  justify-content: center;
+} */
+
+.logo-img {
+  width: 10%;
+  opacity: 65%;
   margin-bottom: 0.5rem;
 }
 
@@ -152,8 +168,6 @@ Default: 11px
   background: none;
   padding: 0;
   margin-bottom: 0.5rem;
-
-  text-shadow: 0 0.1rem 0.1rem #ffbb9e;
 }
 
 .grid-section-information input:focus {
@@ -162,7 +176,7 @@ Default: 11px
 
 .hero-name {
   font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #ff773d;
   font-weight: 900;
   text-align: center;
@@ -170,7 +184,7 @@ Default: 11px
 }
 
 .hero-alt-info-box {
-  border: 2px solid #777;
+  border: 1px solid #ff773d;
   border-radius: 11px;
   padding: 0.5rem;
   background-color: rgba(230, 230, 235, 0.6);
@@ -188,7 +202,7 @@ Default: 11px
 .hero-alt-info label {
   font-size: 1.4rem;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero-alt-info label > input {
@@ -198,12 +212,143 @@ Default: 11px
   border-bottom: 1px solid #333;
   padding-left: 0.3rem;
   margin-bottom: 0.5rem;
-
   overflow: hidden;
   text-overflow: clip;
   font-size: 1.4rem;
-  font-weight: 600;
   color: #333;
   /* width: fit-content; */
   width: max-content;
+}
+
+.characteristic-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.characteristic-header--left {
+  display: flex;
+  justify-content: left;
+  position: relative;
+}
+
+.characteristic-header--right {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.characteristics-header--characteristics {
+  grid-column: span 3;
+}
+
+.characteristics-header--label {
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 0.2rem 0.5rem #000033;
+}
+
+.main-label {
+  font-size: 2.4rem !important;
+}
+
+.characteristic-header--img {
+  position: absolute;
+  width: 30rem;
+  height: 3.5rem;
+  transform: translate(0, -0.4rem);
+}
+
+.characteristics-background--characteristics {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.characteristic-container {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+}
+
+.characteristic-background--img {
+  width: 10rem;
+}
+
+.charactereristic-background--up-arrow {
+  width: 10rem;
+  position: absolute;
+  top: 0;
+  padding: 0.3rem;
+}
+
+.characteristic-background--label {
+  position: absolute;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  top: 2.5rem;
+}
+
+.charactereristic-background--down-arrow {
+  width: 10rem;
+  position: absolute;
+  bottom: 2px;
+  padding: 0.3rem;
+}
+
+.charsheet .characteristic-container input[type='number'] {
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.characteristic-input {
+  font-size: 1.4rem;
+  color: #333;
+  background: rgba(187, 187, 187, 0.8);
+  position: absolute;
+  top: 47px;
+}
+
+.characteristic-background--combat-value-1 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.characteristic-background--health-recovery-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.characteristic-background--defenses-1 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.characteristic-background--defenses-2 {
+  transform: translate(-5rem, -4.5rem);
+}
+
+.characteristic-background--combat-value-2 {
+  transform: translate(5rem, -4.5rem);
+}
+
+.characteristic-background--combat-value-3,
+.characteristic-background--health-recovery-2 {
+  transform: translate(-2rem, -4.5rem);
+}
+
+.characteristic-background--CV-img,
+.characteristic-background--HR-img,
+.characteristic-background--DF-img {
+  width: 10rem;
+}
+
+.characteristic--body-left-move {
+  transform: translate(9.6rem, -0.2rem);
 }
