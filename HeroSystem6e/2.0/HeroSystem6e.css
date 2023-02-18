@@ -41,6 +41,7 @@ Primary font: #333
   
   --- 06 BORDER-RADIUS
 Default: 11px
+50% / 50%
 
   --- 07 WHISTESPACE
   - SPACING SYSTEM (px)
@@ -273,20 +274,41 @@ Default: 11px
   font-size: 3rem;
 }
 
+div[class*='characteristic-header--right'] button {
+  padding: 0;
+  height: 3rem;
+  width: 4rem;
+  background: transparent;
+  border: none;
+  font-size: 3.2rem;
+}
+
 .characteristic-header--section-hide:hover {
   color: #ff773d;
   cursor: pointer;
   font-size: 3.1rem;
 }
 
-.characteristic-header--section-hide:active {
-  text-shadow: 0.1rem 0.1rem 0 #ffbb9e;
+div[class*='characteristic-header--right'] button:active {
+  text-shadow: 0.1rem 0.2rem 0.1rem #ffbb9e;
   transform: translateY(0.2rem);
+}
+
+.hideSectionToggle[value='down'] ~ .btnChevUp {
+  display: none;
+}
+
+.hideSectionToggle[value='up'] ~ .btnChevDown {
+  display: none;
 }
 
 .characteristics-background--characteristics {
   grid-column: 1 / -1;
   text-align: center;
+}
+
+.hideSectionToggle[value='up'] ~ .characteristic-container-visible {
+  display: none;
 }
 
 .characteristic-container {
@@ -386,19 +408,6 @@ Default: 11px
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.characteristic-background--defenses-2 {
-  /* transform: translate(-5rem, -4.5rem); */
-}
-
-.characteristic-background--combat-value-2 {
-  /* transform: translate(5rem, -4.5rem); */
-}
-
-.characteristic-background--combat-value-3,
-.characteristic-background--health-recovery-2 {
-  /* transform: translate(-2rem, -4.5rem); */
 }
 
 .characteristic-background--CV-img,

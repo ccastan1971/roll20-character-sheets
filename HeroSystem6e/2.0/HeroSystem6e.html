@@ -121,11 +121,31 @@
     <div
       class="characteristic-header--right characteristic-header--section-hide material-icons"
     >
-      expand_more
+      <input
+        type="hidden"
+        class="hideSectionToggle"
+        name="attr_characteristics--visible"
+        value="down"
+      />
+      <button class="btnChevDown" type="action" name="act_characteristics-hide">
+        expand_more
+      </button>
+      <button class="btnChevUp" type="action" name="act_characteristics-hide">
+        expand_less
+      </button>
     </div>
   </div>
-  <div class="grid grid--3-cols">
-    <div class="characteristics-background--characteristics">
+
+  <div class="characteristic-container-visible grid grid--3-cols">
+    <input
+      type="hidden"
+      class="hideSectionToggle"
+      name="attr_characteristics--visible"
+      value="down"
+    />
+    <div
+      class="characteristic-container-visible characteristics-background--characteristics"
+    >
       <div class="characteristic-container">
         <img
           class="characteristic-background--img"
@@ -136,7 +156,7 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span
           class="characteristic-background--label characteristic-background--help"
@@ -146,7 +166,7 @@
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -172,14 +192,14 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span class="characteristic-background--label">DEX</span>
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -205,14 +225,14 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span class="characteristic-background--label">CON</span>
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -238,7 +258,7 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span
           class="characteristic-background--label characteristic-background--help"
@@ -248,7 +268,7 @@
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -274,14 +294,14 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span class="characteristic-background--label">EGO</span>
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -307,7 +327,7 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span
           class="characteristic-background--label characteristic-background--help"
@@ -317,7 +337,7 @@
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -343,7 +363,7 @@
           class="charactereristic-background--up-arrow"
           src="https://i.imgur.com/yVXfOf7.png"
           alt="characteristic background up
-        arrow"
+          arrow"
         />
         <span
           class="characteristic-background--label characteristic-background--help"
@@ -353,7 +373,7 @@
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
           alt="characteristic background down
-        arrow"
+          arrow"
         />
         <input
           class="characteristic-input"
@@ -364,16 +384,24 @@
       </div>
     </div>
     <!-- TACTICAL CHARACTERISTICS -->
-    <div class="characteristic-header characteristics-header--label">
+    <div
+      class="characteristic-container-visible characteristic-header characteristics-header--label"
+    >
       Combat Values
     </div>
-    <div class="characteristic-header characteristics-header--label">
+    <div
+      class="characteristic-container-visible characteristic-header characteristics-header--label"
+    >
       Health & Recovery
     </div>
-    <div class="characteristic-header characteristics-header--label">
+    <div
+      class="characteristic-container-visible characteristic-header characteristics-header--label"
+    >
       Defenses
     </div>
-    <div class="characteristic-background--combat-value-1">
+    <div
+      class="characteristic-container-visible characteristic-background--combat-value-1"
+    >
       <div class="characteristic-container">
         <img
           class="characteristic-background--CV-img"
@@ -427,7 +455,9 @@
         />
       </div>
     </div>
-    <div class="characteristic-background--health-recovery-1">
+    <div
+      class="characteristic-container-visible characteristic-background--health-recovery-1"
+    >
       <div class="characteristic-container">
         <img
           class="characteristic-background--HR-img"
@@ -454,7 +484,7 @@
           value="4"
         />
       </div>
-      <div class="characteristic-container">
+      <div class="characteristic-container-visible characteristic-container">
         <img
           class="characteristic-background--HR-img"
           src="https://i.imgur.com/q3XMqHu.png"
@@ -481,7 +511,9 @@
         />
       </div>
     </div>
-    <div class="characteristic-background--defenses-1">
+    <div
+      class="characteristic-container-visible characteristic-background--defenses-1"
+    >
       <div class="characteristic-container">
         <img
           class="characteristic-background--DF-img"
@@ -536,7 +568,7 @@
       </div>
     </div>
     <div
-      class="characteristic-background--combat-value-1 characteristic-background--combat-value-2"
+      class="characteristic-container-visible characteristic-background--combat-value-1 characteristic-background--combat-value-2"
     >
       <div class="characteristic-container">
         <img
@@ -591,7 +623,9 @@
         />
       </div>
     </div>
-    <div class="characteristic-background--health-recovery-2">
+    <div
+      class="characteristic-container-visible characteristic-background--health-recovery-2"
+    >
       <div class="characteristic-container">
         <img
           class="characteristic-background--HR-img"
@@ -646,7 +680,7 @@
       </div>
     </div>
     <div
-      class="characteristic-background--defenses-1 characteristic-background--defenses-2"
+      class="characteristic-container-visible characteristic-background--defenses-1 characteristic-background--defenses-2"
     >
       <div class="characteristic-container">
         <img
@@ -703,44 +737,75 @@
     </div>
   </div>
 </section>
+<section class="movement-section">
+  <div></div>
+</section>
+<section class="skill-section">
+  <div></div>
+</section>
+<section class="talents-perks-section">
+  <div></div>
+</section>
+<section class="powers-section">
+  <div></div>
+</section>
+<section class="tactical-section">
+  <div></div>
+</section>
+<section class="backgound-section">
+  <div></div>
+</section>
+<section class="options-section">
+  <div></div>
+</section>
 
 <!-- SHEETWORKER -->
 <script type="text/worker">
-  <!-- **** Declarations **** -->
-  const chars = ['str', 'dex', 'con', 'int', 'ego', 'pre', 'spd', 'ocv', 'dcv', 'omcv', 'dmcv', 'rec', 'end', 'stun', 'body', 'pd', 'ed', 'rpd', 'red'];
+    <!-- **** Declarations **** -->
+    const chars = ['str', 'dex', 'con', 'int', 'ego', 'pre', 'spd', 'ocv', 'dcv', 'omcv', 'dmcv', 'rec', 'end', 'stun', 'body', 'pd', 'ed', 'rpd', 'red'];
 
-  <!--  **** Functions **** -->
+    <!--  **** Functions **** -->
 
-   <!-- This function is used to set the max attribute of a Characteristic -->
-   const setMaxChar = function(charToMax) {
-    chars.forEach((char, i, arr) =>{
-      if (arr[i] === charToMax.sourceAttribute){
-        const setChar = char + '_max';
-        setAttrs({[setChar]: charToMax.newValue});
-      }
+     <!-- This function is used to set the max attribute of a Characteristic -->
+     const setMaxChar = function(charToMax) {
+      chars.forEach((char, i, arr) =>{
+        if (arr[i] === charToMax.sourceAttribute){
+          const setChar = char + '_max';
+          setAttrs({[setChar]: charToMax.newValue});
+        }
+      });
+    }
+
+    <!-- **** Event Listeners **** -->
+
+    <!-- Set Avatars -->
+    on("sheet:opened", () => {
+      getAttrs(["character_avatar"], (values) => {
+        if(!values["character_avatar"]){
+          setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
+        } else {
+          const avatar = values["character_avatar"];
+          setAttrs({avatar:avatar});
+        };
+      });
     });
 
-  }
-
-  <!-- **** Event Listeners **** -->
-
-  <!-- Set Avatars -->
-  on("sheet:opened", () => {
-    getAttrs(["character_avatar"], (values) => {
-      if(!values["character_avatar"]){
-        setAttrs({avatar:"https://i.imgur.com/JsXeY09.png"});
-      } else {
-        const avatar = values["character_avatar"];
-        setAttrs({avatar:avatar});
-      };
+    <!-- Set max characteristic when changed -->
+    on("change:str change:dex change:con change:int change:ego change:pre change:spd change:ocv change:dcv change:omcv change:dmcv change:rec change:end change:stun change:body change:pd change:ed change:rpd change:red sheet:opened", function(e) {
+      getAttrs([e.sourceAttribute], function(){
+        if (!e.sourceAttribute) return; // guard
+        setMaxChar(e);
+      });
     });
-  });
 
-  <!-- Set max characteristic when changed -->
-  on("change:str change:dex change:con change:int change:ego change:pre change:spd change:ocv change:dcv change:omcv change:dmcv change:rec change:end change:stun change:body change:pd change:ed change:rpd change:red sheet:opened", function(e) {
-    getAttrs([e.sourceAttribute], function(){
-      if (!e.sourceAttribute) return; // guard
-      setMaxChar(e);
-    });
-  });
+  <!-- Section Hide Button -->
+  on("clicked:characteristics-hide", function(e){
+    getAttrs(["characteristics--visible"], function(v){
+      // toggle value of hidden input characteristics--visible
+      if(v["characteristics--visible"] === "down")
+        setAttrs({"characteristics--visible": "up"});
+      else
+        setAttrs({"characteristics--visible": "down"});
+    })
+  })
 </script>
