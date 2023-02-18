@@ -108,7 +108,7 @@
 
 <!-- CHARACTERISTICS -->
 <section class="characteristic-section">
-  <div class="grid grid--3-cols">
+  <div class="grid grid--4-cols">
     <div
       class="characteristic-header characteristics-header--characteristics characteristics-header--label main-label"
     >
@@ -118,6 +118,13 @@
         src="https://i.imgur.com/isPBwFJ.png"
       />
     </div>
+    <div
+      class="characteristic-header--right characteristic-header--section-hide material-icons"
+    >
+      expand_more
+    </div>
+  </div>
+  <div class="grid grid--3-cols">
     <div class="characteristics-background--characteristics">
       <div class="characteristic-container">
         <img
@@ -131,7 +138,10 @@
           alt="characteristic background up
         arrow"
         />
-        <span class="characteristic-background--label">STR</span>
+        <span
+          class="characteristic-background--label characteristic-background--help"
+          >STR</span
+        >
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
@@ -143,6 +153,13 @@
           type="number"
           name="attr_str"
           value="10"
+        />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
         />
       </div>
       <div class="characteristic-container">
@@ -170,6 +187,13 @@
           name="attr_dex"
           value="10"
         />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
+        />
       </div>
       <div class="characteristic-container">
         <img
@@ -196,6 +220,13 @@
           name="attr_con"
           value="10"
         />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
+        />
       </div>
       <div class="characteristic-container">
         <img
@@ -209,7 +240,10 @@
           alt="characteristic background up
         arrow"
         />
-        <span class="characteristic-background--label">INT</span>
+        <span
+          class="characteristic-background--label characteristic-background--help"
+          >INT</span
+        >
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
@@ -221,6 +255,13 @@
           type="number"
           name="attr_int"
           value="10"
+        />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
         />
       </div>
       <div class="characteristic-container">
@@ -248,6 +289,13 @@
           name="attr_ego"
           value="10"
         />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
+        />
       </div>
       <div class="characteristic-container">
         <img
@@ -261,7 +309,10 @@
           alt="characteristic background up
         arrow"
         />
-        <span class="characteristic-background--label">PRE</span>
+        <span
+          class="characteristic-background--label characteristic-background--help"
+          >PRE</span
+        >
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
@@ -274,6 +325,13 @@
           name="attr_pre"
           value="10"
         />
+        <input
+          class="characteristic-input-roll-score"
+          type="text"
+          name="attr_str-roll-score"
+          value="11-"
+          readonly="true"
+        />
       </div>
       <div class="characteristic-container">
         <img
@@ -287,7 +345,10 @@
           alt="characteristic background up
         arrow"
         />
-        <span class="characteristic-background--label">SPD</span>
+        <span
+          class="characteristic-background--label characteristic-background--help"
+          >SPD</span
+        >
         <img
           class="charactereristic-background--down-arrow"
           src="https://i.imgur.com/DMkJScp.png"
@@ -303,13 +364,13 @@
       </div>
     </div>
     <!-- TACTICAL CHARACTERISTICS -->
-    <div class="characteristic-header--left characteristics-header--label">
+    <div class="characteristic-header characteristics-header--label">
       Combat Values
     </div>
     <div class="characteristic-header characteristics-header--label">
       Health & Recovery
     </div>
-    <div class="characteristic-header--right characteristics-header--label">
+    <div class="characteristic-header characteristics-header--label">
       Defenses
     </div>
     <div class="characteristic-background--combat-value-1">
@@ -557,7 +618,7 @@
           value="20"
         />
       </div>
-      <div class="characteristic-container characteristic--body-left-move">
+      <div class="characteristic-container characteristic--body-right-move">
         <img
           class="characteristic-background--HR-img"
           src="https://i.imgur.com/q3XMqHu.png"
@@ -577,7 +638,7 @@
           arrow"
         />
         <input
-          class="characteristic-input"
+          class="characteristic-input characteristic-input--highIndex"
           type="number"
           name="attr_body"
           value="10"
@@ -645,7 +706,25 @@
 
 <!-- SHEETWORKER -->
 <script type="text/worker">
-  <!-- SET AVATARS -->
+  <!-- **** Declarations **** -->
+  const chars = ['str', 'dex', 'con', 'int', 'ego', 'pre', 'spd', 'ocv', 'dcv', 'omcv', 'dmcv', 'rec', 'end', 'stun', 'body', 'pd', 'ed', 'rpd', 'red'];
+
+  <!--  **** Functions **** -->
+
+   <!-- This function is used to set the max attribute of a Characteristic -->
+   const setMaxChar = function(charToMax) {
+    chars.forEach((char, i, arr) =>{
+      if (arr[i] === charToMax.sourceAttribute){
+        const setChar = char + '_max';
+        setAttrs({[setChar]: charToMax.newValue});
+      }
+    });
+
+  }
+
+  <!-- **** Event Listeners **** -->
+
+  <!-- Set Avatars -->
   on("sheet:opened", () => {
     getAttrs(["character_avatar"], (values) => {
       if(!values["character_avatar"]){
@@ -657,13 +736,11 @@
     });
   });
 
-  <!-- Set Characteristic Maximums and Defaults -->
-  <!-- STRENGTH-->
-  on("change:str sheet:opened", function() {
-    getAttrs(["str"], function(values){
-      let s = +values.str || 10;
-      setAttrs({str_max:s
-      });
+  <!-- Set max characteristic when changed -->
+  on("change:str change:dex change:con change:int change:ego change:pre change:spd change:ocv change:dcv change:omcv change:dmcv change:rec change:end change:stun change:body change:pd change:ed change:rpd change:red sheet:opened", function(e) {
+    getAttrs([e.sourceAttribute], function(){
+      if (!e.sourceAttribute) return; // guard
+      setMaxChar(e);
     });
   });
 </script>
